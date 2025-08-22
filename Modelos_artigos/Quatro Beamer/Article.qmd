@@ -1,0 +1,35 @@
+---
+title: "Título da Apresentação"
+subtitle: "Subtítulo opcional"
+author:
+  - "Daniel de Abreu Pereira Uhr\\inst{1}"
+  - "Júlia Gallego Ziero Uhr\\inst{2}"
+institute:
+  - "(1) *Universidade Federal de Santa Catarina (UFSC)*"
+  - "(2) *Universidade Federal de Santa Catarina (UFSC)*"
+date: today
+
+format:
+  beamer-pdf:
+    theme: Madrid
+    colortheme: default
+    fonttheme: professionalfonts
+    aspectratio: 169
+    incremental: false
+    pdf-engine: pdflatex
+    keep-tex: true
+
+bibliography: Refs.bib
+---
+
+## Resultados principais
+
+Vejamos: 
+
+1. Efeito médio: **-275** (p<0.01)
+2. Robustez com controles
+3. Placebo passa
+
+## Imagem
+
+![Distribuição](Fig.png){width=90%}

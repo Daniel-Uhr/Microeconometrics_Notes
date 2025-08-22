@@ -1,0 +1,147 @@
+---
+title: "Título do Artigo"
+author:
+  - name: "Daniel de Abreu Pereira Uhr"
+    affiliation: "Universidade Federal de Santa Catarina (UFSC)"
+    email: daniel.uhr@gmail.com
+    corresponding: true
+  - name: "Júlia Gallego Ziero Uhr"
+    affiliation: "Universidade Federal de Santa Catarina (UFSC)"
+date: today
+abstract: |
+  Passos para usar o Quarto na pasta do arquivo em quarto markdown (*.qmd), salvar junto (i) arquivo de referências *.bib, (ii) arquivos de imagens e (iii) arquivo de modelo de citação da revista (por exemplo, Elsevier). Depois disso, (a) definiar no terminal o caminho para a pasta onde esta o arquivo quarto markdown, (ii) dar o comando para "instalar" na pasta os arquivos de preparação para renderização no formato da revista, e (iii) renderizar.
+keywords: [Palavra 1, Palavra 2, Palavra 3]
+bibliography: Refs.bib
+format:
+  elsevier-pdf:
+    tbl-cap-location: top
+    pdf-engine: pdflatex
+    journal:
+      name: "ANPEC"
+      formatting: preprint
+      model: 3p
+      layout: onecolumn
+      cite-style: authoryear
+    keep-tex: true
+---
+
+**Resumo**
+
+O resumo de um artigo científico empírico é dividido, basicamente, em: Objetivo da pesquisa, o desenho/método e dados utilizados, os principais resultados encontrados, e, por fim, as implicações "práticas" dos achados em termos de políticas privadas/públicas e efeitos sociais. Assim, escreva cada frase do resumo contemplando esses pontos. O resumo deve ter entre 150 e 250 palavras. Não é necessário colocar referências.
+
+*Palavras-Chave:* Palavra-chave 1, Palavra-chave 2, Palavra-chave 3
+
+*JEL:* 1, 2, 3, e 4
+
+---
+
+## Introduction
+
+The impact of the treatment on the dependent variable Y has been widely studied in the literature. However, the literature has not yet explored the effect of the treatment on the outcome variable Y in different sectors of the economy. This paper aims to fill this gap in the literature by investigating the impact of the treatment on the dependent variable Y in different sectors of the economy. The results of this study will contribute to the literature by providing new evidence on the impact of the treatment on the dependent variable Y in different sectors of the economy.
+
+*Dicas:* Desenvolver genericamente o tema em sentido amplo e depois estrito. Anunciar objetivo, dados e resultados. Explicar estrutura do texto.
+
+## Literature Review
+
+### Economic Mechanisms and Theoretical Framework
+
+Dizer o que foi escrito pela literatura sobre o tema da pesquisa. Foco nos mecanismos causais. (É possível aproveitar os principais artigos encontrados em uma bibliometria prévia para fazer a revisão da literatura teórica.)
+
+### Empirical Literature
+
+Dizer o que foi feito pelos artigos empíricos específicos, sobre o tema. Apresentar aspectos como base de dados, e método. Com foco nos resultados (a fim de compará-los posteriormente com nossos achados).
+
+Uma boa estratégia é utilizar a bibliometria para encontrar os 10 artigos empíricos mais citados sobre o tema. Eles serão a base para a revisão da literatura empírica.
+
+### Research Hypotheses
+
+Dizer o que não foi feito pela literatura sobre o tema. Foco na lacuna. Tentar apresentar os potenciais mecanismos causais do problema estudado.
+
+Propomos as seguintes hipóteses de pesquisa:
+
+* Hipótese 1: O tratamento aumenta a variável dependente Y.
+* Hipótese 2: O tratamento aumenta a variável dependente Y, em diferentes setores da economia.
+* Hipótese 3: O tratamento afeta a distribuição de Y.
+
+## Data
+
+Descrever a fonte dos dados utilizados, a composição geral dos dados e o período. Explicar por que esse período foi escolhido. Explicar construção das variáveis de resultado e controle. Apresentar estatísticas descritivas.
+
+Table: Estatísticas Descritivas
+
+| Variável  | Média - Tratados | Média - Não Tratados | Diferença | T-Stat | P-valor |
+| --------- | ---------------- | -------------------- | --------- | ------ | ------- |
+| Y         | 3137.6597        | 3412.9116            | 275.25    | 12.83  | 0.0000  |
+| Mmarried  | 0.4734           | 0.7515               | 0.2781    | 16.55  | 0.0000  |
+| mhisp     | 0.0243           | 0.0363               | 0.0120    | 1.75   | 0.0804  |
+| fhisp     | 0.0336           | 0.0379               | 0.0043    | 0.60   | 0.5475  |
+| foreign   | 0.0255           | 0.0598               | 0.0343    | 4.06   | 0.0001  |
+| alcohol   | 0.0914           | 0.0188               | -0.0726   | -11.03 | 0.0000  |
+| deadkids  | 0.3183           | 0.2459               | -0.0724   | -4.39  | 0.0000  |
+| mage      | 25.1667          | 26.8105              | 1.6438    | 7.81   | 0.0000  |
+| fage      | 24.7431          | 27.8444              | 3.1013    | 8.86   | 0.0000  |
+| medu      | 11.6389          | 12.9299              | 1.2910    | 13.86  | 0.0000  |
+| fedu      | 10.7037          | 12.6739              | 1.9702    | 14.50  | 0.0000  |
+| nprenatal | 9.8623           | 10.9629              | 1.1006    | 7.98   | 0.0000  |
+
+**Notas:** Esta tabela apresenta as estatísticas descritivas.
+
+### Figura 1
+
+![Distribuição do peso dos bebês](Fig.png){#fig-distribution width="50%"}
+
+## Method
+
+A relação pode ser representada pelas equações:
+
+$$
+Y = \alpha + \beta T + \gamma X + \epsilon
+$$
+
+$$
+T = \alpha + \beta Z + \gamma X + \epsilon
+$$
+
+Explicar as variáveis, hipótese de identificação, fontes de viés e justificativa da estratégia.
+
+## Results
+
+Table: Tabela de Resultados
+
+| Modelo         | Efeito    | Erro-Padrão | T-test | P-valor | N    | R² Ajustado |
+| -------------- | --------- | ----------- | ------ | ------- | ---- | ----------- |
+| Treated-Model1 | -275.2519 | 21.4528     | -12.83 | 0.0000  | 4642 | 0.0341      |
+| Treated-Model2 | -218.1870 | 22.0917     | -9.88  | 0.0000  | 4642 | 0.0544      |
+| Treated-Model3 | -203.0297 | 22.0547     | -9.21  | 0.0000  | 4642 | 0.0870      |
+
+**Notas:** Resultados estimados com variáveis de controle.
+
+## Robustness Analysis
+
+Apresentar placebo, métodos alternativos, diferentes amostras. Cada parágrafo descreve uma análise de robustez e seus resultados.
+
+## Discussion and Cost and Benefit Analysis
+
+### Discussion
+
+Interpretar os resultados, relacionar com mecanismos econômicos e literatura. Explicar divergências com estudos anteriores. Explorar o contexto econômico.
+
+Table: Cost and Benefit Analysis
+
+| Política | Custo (R\$) | Juros (10%) | Produção | Insumos  | Receita |
+| -------- | ----------- | ----------- | -------- | -------- | ------- |
+| A        | 20 milhões  | 2 milhões   | 5 MW     | 576 mil  | 3,36 mi |
+| B        | 200 milhões | 20 milhões  | 50 MW    | 5,76 mi  | 33,6 mi |
+| C        | 400 milhões | 40 milhões  | 100 MW   | 11,52 mi | 67,2 mi |
+| D        | 2 bilhões   | 200 milhões | 500 MW   | 57,6 mi  | 336 mi  |
+
+
+
+## Final Remarks
+
+Reafirmar os principais resultados e sua relevância teórica e prática. Discutir limitações da pesquisa e possibilidades futuras. Concluir destacando a contribuição científica e as implicações políticas/sociais dos achados.
+
+## Referências
+
+As citações devem estar no formato Este método foi proposto por @hadash2018estimate.
+
